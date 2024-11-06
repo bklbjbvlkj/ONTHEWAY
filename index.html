@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق تسجيل الدخول وملء البيانات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="loginPage">
+        <h2>تسجيل الدخول</h2>
+        <input type="text" id="username" placeholder="اسم المستخدم" required>
+        <input type="password" id="password" placeholder="كلمة المرور" required>
+        <button class="button" onclick="login()">دخول</button>
+    </div>
+
+    <div class="container" id="personalInfoPage" style="display: none;">
+        <div class="back-button">
+            <a href="#" onclick="showPage('loginPage')">رجوع</a>
+        </div>
+        <h2>بياناتك الشخصية</h2>
+        <input type="text" id="firstName" placeholder="الاسم الأول">
+        <input type="text" id="lastName" placeholder="اسم العائلة">
+        <input type="text" id="address" placeholder="العنوان الشخصي">
+        <input type="text" id="licenseNumber" placeholder="رقم الرخصة">
+        <select id="vehicleType">
+            <option value="">اختر نوع وسيلة النقل</option>
+            <option value="موتوسيكل">موتوسيكل</option>
+            <option value="تروسيكل">تروسيكل</option>
+            <option value="سيارة">سيارة</option>
+        </select>
+        <input type="text" id="phoneNumber" placeholder="رقم الهاتف">
+        <button class="button" onclick="saveAndNavigate()">التالي</button>
+    </div>
+
+    <div class="container" id="orderDetailsPage" style="display: none;">
+        <div class="back-button">
+            <a href="#" onclick="showPage('personalInfoPage')">رجوع</a>
+        </div>
+        <h2>تفاصيل الطلب</h2>
+        <div class="info-box">
+            <h3>معلومات الطلب</h3>
+            <p id="pickupLocation">مكان استلام الاوردر: فرع النصر</p>
+            <p id="deliveryLocation">مكان التسليم: شارع محمد فؤاد عمارة 33 الدور الاول</p>
+            <p id="deliveryTime">وقت التسليم: 30 دقيقة</p>
+        </div>
+        <div class="info-box">
+            <h3>تفاصيل الطلبات</h3>
+            <p id="orderCount">عدد الطلبات: 5</p>
+            <p id="orderValue">قيمة الطلب: 100 ج</p>
+        </div>
+        <div class="info-box">
+            <h3>الدفع اليومي</h3>
+            <p id="dailyTotal">إجمالي الدفع اليومي: 500 ج</p>
+            <p id="totalOrdersValue">إجمالي قيمة الطلبات: 575 ج</p>
+            <p id="commission">إجمالي عمولة الطيار: 75 ج</p>
+        </div>
+        <div class="info-box">
+            <h3>إجمالي أموالك</h3>
+            <p id="totalMoney">إجمالي أموالك: 500 ج</p>
+        </div>
+        <button class="button" onclick="refreshPage()">تحديث</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

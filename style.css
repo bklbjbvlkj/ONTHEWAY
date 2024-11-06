@@ -1,0 +1,102 @@
+/* خلفية الصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://i.imgur.com/nKBf32j.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: #970747; /* اللون الأساسي */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #970747;
+    box-shadow: 0 0 5px rgba(151, 7, 71, 0.3);
+}
+
+.button {
+    background: linear-gradient(135deg, #970747, #d91a63); /* تدرج للأزرار */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #d91a63, #970747); /* عكس التدرج عند التمرير */
+}
+
+.back-button {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.back-button a {
+    color: #970747;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+    color: #d91a63; /* لون أفتح عند التمرير */
+}
+
+/* تصميم المربعات */
+.info-box {
+    background: rgba(245, 245, 245, 0.95);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-box h3 {
+    color: #970747;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
